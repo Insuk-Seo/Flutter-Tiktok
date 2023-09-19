@@ -46,6 +46,9 @@ class SignUpScreen extends StatelessWidget {
               AuthButton(
                 text: "Use phone or email",
               ),
+              AuthButton(
+                text: "Continue with Apple",
+              ),
             ],
           ),
         ),

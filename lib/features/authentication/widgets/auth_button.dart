@@ -12,9 +12,11 @@ class AuthButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FractionallySizedBox(
+      // 부모의 크기를 기준으로 자식의 크기를 설정함.
+      widthFactor: 1, // 1이면 100% 반영, 0.8이면 부모 크기의 80% 반영
       child: Container(
         padding: const EdgeInsets.symmetric(
-          vertical: Sizes.size8,
+          vertical: Sizes.size14,
         ),
         decoration: BoxDecoration(
           border: Border.all(
@@ -22,7 +24,14 @@ class AuthButton extends StatelessWidget {
             width: Sizes.size1,
           ),
         ),
-        child: Text(text),
+        child: Text(
+          text,
+          textAlign: TextAlign.center,
+          style: const TextStyle(
+            fontSize: Sizes.size16,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
       ),
     );
   }
